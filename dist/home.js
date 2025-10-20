@@ -24,12 +24,14 @@ const backdrop = document.getElementById("backdrop");
 const openMenu = () => {
     sideNav.classList.remove("close");
     hamburger.style.display = "none";
-    backdrop.style.opacity = "1000";
+    backdrop.style.opacity = "1";
+    backdrop.style.zIndex = "1000";
 };
 const closeMenu = () => {
     sideNav.classList.add("close");
     hamburger.style.display = "block";
     backdrop.style.opacity = "0";
+    backdrop.style.zIndex = "0";
 };
 hamburger.addEventListener("click", openMenu);
 closeButton.addEventListener("click", closeMenu);
