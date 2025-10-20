@@ -9,10 +9,25 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <script
+      src="https://kit.fontawesome.com/d57b7ba5fe.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <div id="backdrop"></div>
+    <nav id="side-nav" class="close">
+      <button id="close-button">X</button>
+      <ul class="navlist side">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./home.html">Services</a></li>
+        <li><a href="./home.html">Solutions</a></li>
+        <li><a href="./home.html">Academy</a></li>
+        <li><a href="./home.html">About Us</a></li>
+      </ul>
+    </nav>
     <header id="header">
-      <nav id="nav">
+      <nav id="nav" class="container">
         <a href="./index.html" class="head-logo">
           <img src="./images/fasticorelogo1.png" alt="Fasticore Logo" />
         </a>
@@ -26,15 +41,6 @@
         <div id="menu-bar">
           <img src="./images/menubar.png" alt="Menu Bar" />
         </div>
-      </nav>
-      <nav id="side-nav">
-        <ul class="navlist">
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./home.html">Services</a></li>
-          <li><a href="./home.html">Solutions</a></li>
-          <li><a href="./home.html">Academy</a></li>
-          <li><a href="./home.html">About Us</a></li>
-        </ul>
       </nav>
     </header>
 
@@ -215,7 +221,6 @@
             every stage of the journey to deliver practical, scalable, and
             impactful results.
           </h4>
-          <button>Contact Us</button>
         </div>
         <img
           id="build-img"
@@ -348,7 +353,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Consulting</h3>
+              <h4>Consulting</h4>
               <p>
                 This is the first stage where we listen to your business
                 needs,understand it and analyze it in order to help position you
@@ -364,7 +369,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Project Discussion</h3>
+              <h4>Project Discussion</h4>
               <p>
                 This is the first stage where we listen to your business We
                 create documents to break down the entire project scope to
@@ -380,7 +385,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Project Planning</h3>
+              <h4>Project Planning</h4>
               <p>
                 We collaborate with clients to define clear goals, set
                 timelines, and create a structured roadmap to ensure timely
@@ -396,7 +401,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Project Planning</h3>
+              <h4>Project Planning</h4>
               <p>
                 We collaborate with clients to define clear goals, set
                 timelines, and create a structured roadmap to ensure timely
@@ -412,7 +417,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Project Planning</h3>
+              <h4>Project Planning</h4>
               <p>
                 We collaborate with clients to define clear goals, set
                 timelines, and create a structured roadmap to ensure timely
@@ -428,7 +433,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Project Planning</h3>
+              <h4>Project Planning</h4>
               <p>
                 We collaborate with clients to define clear goals, set
                 timelines, and create a structured roadmap to ensure timely
@@ -444,7 +449,7 @@
               alt="Consulting"
             />
             <div class="journey-text">
-              <h3>Project Planning</h3>
+              <h4>Project Planning</h4>
               <p>
                 We collaborate with clients to define clear goals, set
                 timelines, and create a structured roadmap to ensure timely
@@ -463,15 +468,79 @@
           <img class="locations" src="/images/locations.png" alt="Countries" />
         </div>
         <div class="world-text">
-          <h4>Make Fasticore your technology partner today!</h4>
+          <h2>Make Fasticore your technology partner today!</h2>
           <p>
             We take the burden of innovation and scalability off your shoulders
             while you focus on your business and we also provide solutions that
             make it easy to run your business anywhere in the world.
           </p>
         </div>
+        <div class="ethics">
+          <p>Technology Advice</p>
+          <span></span>
+          <p>Innovation</p>
+          <span></span>
+          <p>Right Solution</p>
+          <span></span>
+          <p>Client's Support</p>
+        </div>
+        <img class="partners" src="/images/partners.png" alt="Partners" />
       </div>
     </section>
+
+    <footer>
+      <div id="footer-container" class="container">
+        <form>
+          <input type="text" placeholder="Your Name" />
+          <input type="text" placeholder="Your Email" />
+          <textarea name="" id="" placeholder="Your Message"></textarea>
+          <button>Send</button>
+        </form>
+
+        <div class="links">
+          <div class="reach">
+            <a href="">
+              <img src="/images/f-location.png" alt="Location" />
+              <p>Remote</p>
+            </a>
+            <a href="">
+              <img src="/images/f-phone.png" alt="Phone" />
+              <p>Phone</p>
+            </a>
+            <a href="">
+              <img src="/images/f-mail.png" alt="Mail" />
+              <p>Mail</p>
+            </a>
+          </div>
+          <ul class="pages">
+            <h4>Pages</h4>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Solutions</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-container container">
+        <div>
+          <div class="socials">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <p>Fasticore Platform are trademarks from Fasticore Technology</p>
+          <div class="terms">
+            <a href="">Terms of Use</a>
+            <span></span>
+            <a href="">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="copyrights">
+          © Copyright by Fasticore Technology - All right reserved.
+        </p>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
