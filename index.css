@@ -234,12 +234,12 @@ header nav {
 #services-container h2 {
   text-align: center;
 }
-#services-container h3 {
-  margin-top: 0.5rem;
-  font-weight: normal;
-  text-align: center;
-  width: 100%;
-}
+  #services-container h3 {
+    margin-top: 0.5rem;
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+  }
 .mySwiper {
   width: 100%;
   margin: 1rem 0;
