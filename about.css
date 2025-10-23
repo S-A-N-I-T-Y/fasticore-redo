@@ -139,20 +139,21 @@ header nav {
 }
 
 #hero {
-  min-height: 130vh;
+  min-height: 650px;
   background-image: url(/images/aboutHero.png);
   color: var(--light-background);
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  position: relative;
 }
 #bottom-gradient {
   position: absolute;
   width: 100%;
-  bottom: -30%;
+  bottom: 0;
   left: 0;
-  height: 40%;
+  height: 45%;
   background: linear-gradient(
     3.24deg,
     #f5f5fa 42.72%,
@@ -162,7 +163,7 @@ header nav {
 .overlay {
   position: absolute;
   width: 100%;
-  top: top;
+  top: 0;
   left: 0;
   min-height: 100%;
   background: #00000040;
@@ -178,12 +179,15 @@ header nav {
   color: var(--orange-color);
 }
 #hero-container p {
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 0.5rem;
 }
 #hero-container {
   z-index: 2;
   height: 100%;
+}
+#hero-container div p {
+  font-size: 14px;
 }
 #hero-container div {
   background: #454452;
@@ -191,14 +195,10 @@ header nav {
   border-radius: 20px;
   margin-top: 2rem;
 }
-#hero-container div p {
-  font-size: 13px;
-  margin-top: 0.5rem;
-}
 #values {
   padding: 1rem 0;
 }
-#values-values h4 {
+#values-container h4 {
   margin-top: 0.5rem;
   font-weight: normal;
   width: 100%;
@@ -230,12 +230,12 @@ header nav {
   z-index: 1;
 }
 .values-card h4 {
-  padding: 0 1rem;
+  padding: 1.5rem;
   margin-top: 2rem;
 }
 .values-card h5 {
   font-weight: normal;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   line-height: 1.2rem;
 }
 .values-card div {
@@ -285,9 +285,16 @@ header nav {
   background-color: var(--text-color);
   padding: 1rem 0;
 }
+#strength h2 {
+  color: var(--light-background);
+}
+#strength h2 span {
+  color: var(--orange-color);
+}
 .strength-cards {
   display: grid;
   gap: 2rem;
+  margin-top: 2rem;
 }
 .strength-card {
   color: #fff;
@@ -554,34 +561,14 @@ form button {
   font-size: 0.6rem;
 }
 @media screen and (min-width: 22.8125rem) {
-  #hero-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    letter-spacing: 1px;
-  }
 }
 
 @media screen and (min-width: 27.1875rem) {
   #hero-container {
     margin-top: 3.4rem;
   }
-  #hero-container > p {
-    font-size: 15px;
-  }
-  #hero-container div p {
-    font-size: 15px;
-  }
 }
 @media screen and (min-width: 30rem) {
-  /* #hero {
-    min-height: 110vh;
-  }
-  #bottom-gradient {
-    bottom: 10%;
-  } */
   #hero-container {
     margin-top: 5rem;
     letter-spacing: 1.2px;
@@ -599,21 +586,21 @@ form button {
     margin-top: 2rem;
     padding: 2rem;
   }
-  #hero-container > p {
+  #hero-container p {
     font-size: 16px;
   }
+
   #hero-container div p {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  .leaders {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
   }
 }
 
 @media screen and (min-width: 50.625rem) {
-  #hero {
-    min-height: 100vh;
-  }
-  #bottom-gradient {
-    bottom: 0%;
-  }
   .head-logo img {
     width: 100px;
   }
@@ -648,14 +635,7 @@ form button {
   #leadership {
     padding: 3rem 0;
   }
-  .leaders .first {
-    display: flex;
-    gap: 2rem;
-  }
-  .leaders .second {
-    display: flex;
-    gap: 1rem;
-  }
+
   #client {
     padding: 3rem 0;
   }
