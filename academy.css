@@ -180,8 +180,8 @@ header nav {
   color: var(--orange-color);
   text-align: center;
   width: 100%;
-  display: flex;
-  justify-self: center;
+  display: block;
+  text-align: center;
   margin-top: 1rem;
 }
 .hero-card {
@@ -204,6 +204,7 @@ header nav {
 }
 .hero-card .text li {
   font-size: 10px;
+  margin: auto;
 }
 
 .card-img {
@@ -215,10 +216,11 @@ header nav {
 }
 .graduates {
   margin-top: 3rem;
+  display: grid;
+  gap: 2rem;
 }
 .graduate {
   min-width: 230px;
-  max-width: 400px;
   padding: 1.5rem 1rem;
   border-left: 2px solid var(--orange-color);
   border-top-left-radius: 5px;
@@ -241,7 +243,7 @@ header nav {
   font-weight: normal;
 }
 .register {
-  margin-top: 5rem ;
+  margin-top: 5rem;
 }
 .register-form {
   max-width: 550px;
@@ -268,6 +270,7 @@ header nav {
   display: block;
   padding: 0.8rem 1rem;
   border: 1px solid #ccc;
+  border-radius: 10px;
 }
 .register-form textarea {
   width: 100%;
@@ -275,6 +278,7 @@ header nav {
   border: 1px solid #ccc;
   padding: 0.8rem 1rem;
   height: 150px;
+  border-radius: 10px;
 }
 .register-form button {
   width: 100%;
@@ -431,35 +435,10 @@ header nav {
   } */
 }
 @media screen and (min-width: 30rem) {
-  /* #hero {
-    min-height: 110vh;
-  }
-  #bottom-gradient {
-    bottom: 10%;
-  } */
-  /* #hero-container {
-    margin-top: 5rem;
-    letter-spacing: 1.2px;
-  }
-  #hero-container div {
-    padding: 1.5rem;
-  } */
+
 }
 /* Tablet */
 @media screen and (min-width: 40rem) {
-  /* #hero-container {
-    letter-spacing: 2px;
-  }
-  #hero-container div {
-    margin-top: 2rem;
-    padding: 2rem;
-  }
-  #hero-container > p {
-    font-size: 16px;
-  }
-  #hero-container div p {
-    font-size: 16px;
-  } */
   .crm-text {
     max-width: 60%;
   }

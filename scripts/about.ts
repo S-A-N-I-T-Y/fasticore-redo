@@ -7,7 +7,7 @@ const sideNav = document.getElementById("side-nav") as HTMLElement;
 const hamburger = document.getElementById("menu-bar") as HTMLElement;
 const closeButton = document.getElementById("close-button") as HTMLElement;
 const backdrop = document.getElementById("backdrop") as HTMLElement;
-const header = document.getElementById("header");
+const header = document.getElementById("header") as HTMLElement;
 const swiperCont = document.querySelector(".mySwiper") as HTMLElement;
 
 const openMenu = () => {

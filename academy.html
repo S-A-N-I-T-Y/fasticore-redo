@@ -19,7 +19,7 @@
     <nav id="side-nav" class="close">
       <button id="close-button">X</button>
       <ul class="navlist side">
-        <li><a href="./home.html">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./services.html">Services</a></li>
         <li><a href="./solution.html">Solutions</a></li>
         <li><a href="./academy.html">Academy</a></li>
@@ -63,7 +63,7 @@
               participants receive hands-on training in:
             </p>
             <ul>
-              <li>Frontend Development (React, Vue, HTML, CSS, JS)</li>
+              <li>Frontend Development (React, Vue, CSS, JS)</li>
               <li>UI/UX Design Principles</li>
               <li>Backend Development (Node.js, Python, APIs)</li>
               <li>Data Science & Analytics</li>
@@ -133,16 +133,26 @@
           <form class="register-form">
             <div>
               <label>Full Name*</label>
-              <input type="text" />
+              <input type="text" required />
             </div>
             <div>
               <label>Email Address*</label>
-              <input type="text" />
+              <input type="text" required />
             </div>
             <div>
               <label>Preferred Track</label>
-              <select name="" id="">
-                <option value=""></option>
+              <select id="" required>
+                <option>Select Track</option>
+                <option value="Frontend Development">
+                  Frontend Development
+                </option>
+                <option value="Frontend Development">
+                  Backend Development
+                </option>
+                <option value="Frontend Development">UI/UX Design</option>
+                <option value="Frontend Development">
+                  Data Science & Analytics
+                </option>
               </select>
             </div>
             <div>
@@ -160,9 +170,14 @@
     <footer id="footer">
       <div id="footer-container" class="container">
         <form class="footer-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Your Email" />
-          <textarea name="" id="" placeholder="Your Message"></textarea>
+          <input type="text" placeholder="Your Name" required />
+          <input type="text" placeholder="Your Email" required />
+          <textarea
+            name=""
+            id=""
+            placeholder="Your Message"
+            required
+          ></textarea>
           <button>Send</button>
         </form>
 

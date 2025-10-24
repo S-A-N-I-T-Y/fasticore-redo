@@ -324,16 +324,13 @@ header nav {
 }
 .leaders {
   margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
   gap: 5rem;
 }
 .leader {
   position: relative;
   box-shadow: -5px 12px 40.8px -8px #0000007a;
   min-width: 230px;
-  max-width: 400px;
   border-radius: 20px;
 }
 .leader-text {
@@ -367,11 +364,9 @@ header nav {
   display: grid;
   gap: 2rem;
   margin-top: 2rem;
-  justify-content: center;
 }
 .client {
   min-width: 230px;
-  max-width: 400px;
   padding: 1.5rem 1rem;
   border-left: 2px solid var(--orange-color);
   border-top-left-radius: 5px;
@@ -381,7 +376,7 @@ header nav {
   box-shadow: -5px 12px 40.8px -8px #00000033;
 }
 .client > p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 .client-info {
   display: flex;
@@ -402,17 +397,18 @@ header nav {
 }
 .featuredSwiper {
   width: 100%;
-  min-height: 450px;
+  min-height: 500px;
 }
 .slide {
   min-width: 200px;
   max-width: 250px;
+  min-height: 420px;
   border: 1px solid var(--orange-color);
   border-radius: 10px;
 }
 .project img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -598,6 +594,20 @@ form button {
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
   }
+
+  .clients {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+  .client {
+    padding: 1.2rem 1.6rem;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 @media screen and (min-width: 50.625rem) {
@@ -639,19 +649,7 @@ form button {
   #client {
     padding: 3rem 0;
   }
-  .clients {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-  }
-  .client {
-    padding: 1.2rem 1.6rem;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 20px;
-  }
+
   #featured {
     padding: 3rem 0;
   }
@@ -662,7 +660,10 @@ form button {
     width: 100%;
     margin: 0 auto;
   }
-
+  
+  .slide {
+    min-height: 400px ;
+  }
   #ideas-container {
     margin-top: 1rem;
   }

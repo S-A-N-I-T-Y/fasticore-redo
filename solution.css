@@ -447,10 +447,11 @@ header nav {
 }
 .customers {
   margin-top: 2rem;
+  display: grid;
+  gap: 2rem;
 }
 .customer {
   min-width: 230px;
-  max-width: 400px;
   padding: 1.5rem 1rem;
   border-left: 2px solid var(--orange-color);
   border-top-left-radius: 5px;
@@ -616,57 +617,18 @@ form button {
 }
 
 @media screen and (min-width: 22.8125rem) {
-  /* #hero-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    letter-spacing: 1px;
-  } */
+ 
 }
 
 @media screen and (min-width: 27.1875rem) {
-  /* #hero-container {
-    margin-top: 3.4rem;
-  }
-  #hero-container > p {
-    font-size: 15px;
-  }
-  #hero-container div p {
-    font-size: 15px;
-  } */
+ 
 }
 @media screen and (min-width: 30rem) {
-  /* #hero {
-    min-height: 110vh;
-  }
-  #bottom-gradient {
-    bottom: 10%;
-  } */
-  /* #hero-container {
-    margin-top: 5rem;
-    letter-spacing: 1.2px;
-  }
-  #hero-container div {
-    padding: 1.5rem;
-  } */
+
 }
 /* Tablet */
 @media screen and (min-width: 40rem) {
-  /* #hero-container {
-    letter-spacing: 2px;
-  }
-  #hero-container div {
-    margin-top: 2rem;
-    padding: 2rem;
-  }
-  #hero-container > p {
-    font-size: 16px;
-  }
-  #hero-container div p {
-    font-size: 16px;
-  } */
+ 
   .crm-text {
     max-width: 60%;
   }

@@ -467,7 +467,6 @@ section button {
     flex-direction: row;
   }
 }
-
 /* Desktop */
 @media screen and (min-width: 64rem) {
   .head-logo img {
