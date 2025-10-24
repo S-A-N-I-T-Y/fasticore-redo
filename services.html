@@ -15,6 +15,302 @@
     ></script>
   </head>
   <body>
+    <div id="backdrop"></div>
+    <nav id="side-nav" class="close">
+      <button id="close-button">X</button>
+      <ul class="navlist side">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./solution.html">Solutions</a></li>
+        <li><a href="./academy.html">Academy</a></li>
+        <li><a href="./about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <header id="header">
+      <nav id="nav" class="container">
+        <a href="./index.html" class="head-logo">
+          <img src="./images/fasticorelogo2.png" alt="Fasticore Logo" />
+        </a>
+        <ul class="navlist">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./solution.html">Solutions</a></li>
+          <li><a href="./academy.html">Academy</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+        <div id="menu-bar">
+          <img src="./images/lightmenu.png" alt="Menu Bar" />
+        </div>
+      </nav>
+    </header>
+
+    <section id="quote">
+      <div id="quote-container" class="container">
+        <h1>Get Your Project <span>Quote</span></h1>
+        <p>
+          Transform your ideas into reality tell us about yourproject and we
+          will provide you with a detailed proposal tailored to your neeeds
+        </p>
+
+        <div class="quotes">
+          <div class="quote-form">
+            <div class="progress">
+              <div class="step active" data-step="1">1</div>
+              <div class="line"></div>
+              <div class="step" data-step="2">2</div>
+              <div class="line"></div>
+              <div class="step" data-step="3">3</div>
+              <div class="line"></div>
+              <div class="step" data-step="4">4</div>
+            </div>
+
+            <form id="quote-form">
+              <!-- Step 1 -->
+
+              <div class="form-step active" data-step="1">
+                <h2>What type of project do you have in mind?</h2>
+
+                <section>
+                  <button>
+                    <img src="/images/quotemobile.png" alt="Mobile" />
+                    <span>Mobile Phone</span>
+                    IOS, Android, or Cross-platform
+                  </button>
+                  <button>
+                    <img src="/images/quoteglobe.png" alt="Globe" />
+                    <span>Web Application</span>
+                    Custom Web Solutions
+                  </button>
+                  <button>
+                    <img src="/images/quoteenterprise.png" alt="Enterprise" />
+                    <span>Enterprise Platform</span>
+                    Large-Scale Business Solutions
+                  </button>
+                  <button>
+                    <img src="/images/quoteintegration.png" alt="Integration" />
+                    <span>Custom Integration</span>
+                    API and Systems Integration
+                  </button>
+                  <button>
+                    <img
+                      src="/images/quoterocket.png"
+                      alt="Digital Transformation"
+                    />
+                    <span>Digital Transformation</span>
+                    Complete Digital Overhaul
+                  </button>
+                  <button>
+                    <img src="/images/quotebulb.png" alt="Bulb" />
+                    <span>Need Consultation</span>
+                    Not Sure What You Need?
+                  </button>
+                </section>
+                <div class="actions">
+                  <button class="next">Next Step</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="2">
+                <h2>Tell us about your project</h2>
+                <div>
+                  <label>What problem are you trying to solve?*</label>
+                  <textarea
+                    placeholder="Describe the main challenge or opportunity your project addresses"
+                  ></textarea>
+                </div>
+                <div>
+                  <label>Who is your target audience?</label>
+                  <input
+                    placeholder="e.g., Small business, consumers, internal employees..."
+                  />
+                </div>
+                <div>
+                  <label
+                    >Do you have an existing system to integrate with?</label
+                  >
+                  <select></select>
+                </div>
+                <div>
+                  <label>Whats your ideal timeline*</label>
+                  <select></select>
+                </div>
+                <div>
+                  <label>Budget Range (Optional)</label>
+                  <select></select>
+                </div>
+                <div class="actions">
+                  <button class="prev">Previous</button>
+                  <button class="next">Next Step</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="3">
+                <h2>How Can we reach you?.</h2>
+                <div>
+                  <label>Company/Organization*</label>
+                  <input />
+                </div>
+                <div>
+                  <label>Your Name*</label>
+                  <input />
+                </div>
+                <div>
+                  <label>Your Role*</label>
+                  <input
+                    type="text"
+                    placeholder="e.g., CEO, CTO, Product Manager..."
+                  />
+                </div>
+                <div>
+                  <label>Email Address*</label>
+                  <input type="text" />
+                </div>
+                <div>
+                  <label>Phone Number</label>
+                  <input type="text" />
+                </div>
+                <div>
+                  <label>Preferred Contact Method*</label>
+                  <select></select>
+                </div>
+                <div class="actions">
+                  <button class="prev">Previous</button>
+                  <button class="next">Next Step</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-step="4">
+                <h2>Any additional details?</h2>
+                <div>
+                  <label>Additional Requirments or Questions</label>
+                  <textarea
+                    placeholder="Additional Requirments or Questions"
+                  ></textarea>
+                </div>
+                <div>
+                  <label>How did you hear about us?</label>
+                  <input />
+                </div>
+
+                <div class="actions">
+                  <button class="prev">Previous</button>
+                  <button class="next">Next Step</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="questions">
+            <div class="faqs">
+              <h3>Frequently Asked Questions</h3>
+              <div class="faq">
+                <p>How long does it take to get a quote?</p>
+                <img src="/images/dropdown.png" alt="dropdown" />
+              </div>
+              <div class="faq">
+                <p>How long does it take to get a quote?</p>
+                <img src="/images/dropdown.png" alt="dropdown" />
+              </div>
+              <div class="faq">
+                <p>How long does it take to get a quote?</p>
+                <img src="/images/dropdown.png" alt="dropdown" />
+              </div>
+              <div class="faq">
+                <p>How long does it take to get a quote?</p>
+                <img src="/images/dropdown.png" alt="dropdown" />
+              </div>
+              <div class="faq">
+                <p>How long does it take to get a quote?</p>
+                <img src="/images/dropdown.png" alt="dropdown" />
+              </div>
+            </div>
+            <div class="why">
+              <h3>Why Choose Fasticore?</h3>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <p>10 years of Experience in software development</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <p>End-to-end Service from design to deployment</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <p>Agile development methodology</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <p>Scalable, high quality solutions</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <p>Dedicated project management</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-check"></i>
+                <p>Post launch support and maintainance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div id="footer-container" class="container">
+        <form class="footer-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="text" placeholder="Your Email" />
+          <textarea name="" id="" placeholder="Your Message"></textarea>
+          <button>Send</button>
+        </form>
+
+        <div class="links">
+          <div class="reach">
+            <a href="">
+              <img src="/images/f-location.png" alt="Location" />
+              <p>Remote</p>
+            </a>
+            <a href="">
+              <img src="/images/f-phone.png" alt="Phone" />
+              <p>Phone</p>
+            </a>
+            <a href="">
+              <img src="/images/f-mail.png" alt="Mail" />
+              <p>Mail</p>
+            </a>
+          </div>
+          <ul class="pages">
+            <h4>Pages</h4>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/solution.html">Solutions</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-container container">
+        <div>
+          <div class="socials">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <p>Fasticore Platform are trademarks from Fasticore Technology</p>
+          <div class="terms">
+            <a href="">Terms of Use</a>
+            <span></span>
+            <a href="">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="copyrights">
+          © Copyright by Fasticore Technology - All right reserved.
+        </p>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
