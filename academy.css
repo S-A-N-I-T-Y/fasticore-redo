@@ -240,7 +240,52 @@ header nav {
   color: var(--orange-color);
   font-weight: normal;
 }
-
+.register {
+  margin-top: 5rem ;
+}
+.register-form {
+  max-width: 550px;
+  padding-top: 1rem;
+  margin: auto;
+}
+.register div {
+  margin-top: 1rem;
+}
+.register-form label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.register-form input {
+  display: block;
+  width: 100%;
+  background-color: inherit;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+.register-form select {
+  width: 100%;
+  display: block;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+}
+.register-form textarea {
+  width: 100%;
+  background-color: inherit;
+  border: 1px solid #ccc;
+  padding: 0.8rem 1rem;
+  height: 150px;
+}
+.register-form button {
+  width: 100%;
+  background: var(--orange-color);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
 #footer-container {
   display: flex;
   flex-direction: column;
@@ -249,7 +294,7 @@ header nav {
   padding: 4rem 0;
 }
 
-form {
+.footer-form {
   min-height: 400px;
   margin: auto;
   width: 90%;
@@ -261,14 +306,14 @@ form {
   box-shadow: -5px 12px 40.8px -8px #00000033;
   padding: 1.5rem;
 }
-form input {
+.footer-form input {
   border-radius: 20px;
   padding: 0.8rem 1rem;
   border: none;
   background: #f5f5f5;
   outline: none;
 }
-form textarea {
+.footer-form textarea {
   border-radius: 10px;
   padding: 0.8rem 1rem;
   height: 150px;
@@ -276,7 +321,7 @@ form textarea {
   background: #f5f5f5;
   outline: none;
 }
-form button {
+.footer-form button {
   border-radius: 20em;
   cursor: pointer;
   font-weight: bold;
