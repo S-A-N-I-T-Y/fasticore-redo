@@ -25,6 +25,8 @@ const aboutText = document.getElementById("about-text");
 const aboutCard = document.querySelectorAll(".about-card");
 const journey = document.getElementById("journey");
 const journeyH2 = document.getElementById("journey-h2");
+const journeyTrack = document.querySelectorAll(".track");
+const journeyLine = document.querySelectorAll(".line");
 const journeyCard = document.querySelectorAll(".journey-card");
 const journeyRight = document.querySelectorAll(".right");
 const journeyLeft = document.querySelectorAll(".left");
@@ -71,11 +73,12 @@ const headerTween = gsap
     scrollTrigger: {
         trigger: header,
         start: "bottom top",
+        toggleActions: "play none none reverse",
     },
 })
-    .fromTo(header, { backgroundColor: "transparent" }, {
+    .fromTo(header, { backgroundColor: "transparent", borderBottom: "2px solid transparent" }, {
     backgroundColor: "#ffffff",
-    duration: 0.5,
+    borderBottom: "1px solid #00000010",
     ease: "power1.inOut",
 });
 const heroTween = gsap
@@ -162,7 +165,30 @@ journeyCard.forEach((card) => {
         y: 50,
         scrollTrigger: {
             trigger: card,
-            start: "top 90%",
+            start: "20% 90%",
+            toggleActions: "play none none reverse",
+        },
+    });
+});
+journeyTrack.forEach((trck) => {
+    gsap.from(trck, {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+        scrollTrigger: {
+            trigger: trck,
+            start: "80% bottom",
+            toggleActions: "play none none reverse",
+        },
+    });
+});
+journeyLine.forEach((line, i) => {
+    gsap.from(line, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: line,
+            start: "top 80%",
+            scrub: true,
             toggleActions: "play none none reverse",
         },
     });

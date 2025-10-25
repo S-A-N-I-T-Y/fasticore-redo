@@ -14,6 +14,7 @@
   font-family: sans-serif;
   line-height: 1.5;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 a {
   text-decoration: none;
@@ -34,6 +35,24 @@ body {
   padding: 1.5rem 0;
   margin: auto;
   position: relative;
+}
+.main-btn {
+  margin-top: 1rem;
+  background: var(--orange-color);
+  color: var(--light-background);
+  border: none;
+  padding: 1em 1.5em;
+  border-radius: 20em;
+  cursor: pointer;
+  box-shadow: 5px 6px 0px 0px #ff67014a;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.main-btn:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 5px 6px 0px 0px #ff67014a inset;
 }
 
 header {
@@ -214,25 +233,6 @@ header nav {
   font-size: 0.9rem;
   line-height: 1.2rem;
 }
-#hero-text button {
-  margin-top: 1rem;
-  background: var(--orange-color);
-  color: var(--light-background);
-  border: none;
-  padding: 1em 1.2em;
-  border-radius: 20em;
-  cursor: pointer;
-  box-shadow: 5px 6px 0px 0px #ff67014a;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-#hero-text button:hover {
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.1);
-  box-shadow: 5px 6px 0px 0px #ff67014a inset;
-}
-
 #services {
   padding: 1rem 0;
 }
@@ -340,11 +340,11 @@ header nav {
   justify-content: center;
   gap: 2.5rem;
 }
-.build-text h3 {
+.build-text h4 {
   margin-top: 0.5rem;
   color: var(--orange-color);
 }
-.build-text h4 {
+.build-text h5 {
   margin-top: 0.5rem;
   font-weight: normal;
 }
@@ -369,25 +369,13 @@ header nav {
 .solution-text {
   width: 100%;
 }
-.solution-text h3 {
+.solution-text h4 {
   margin-top: 0.5rem;
   color: var(--orange-color);
 }
-.solution-text h4 {
+.solution-text h5 {
   margin-top: 0.5rem;
   font-weight: normal;
-}
-.solution-text button {
-  margin-top: 2rem;
-  background: var(--orange-color);
-  color: var(--light-background);
-  border: none;
-  padding: 1em 1.2em;
-  border-radius: 20em;
-  cursor: pointer;
-  box-shadow: 5px 6px 0px 0px #ff67014a;
-  font-weight: bold;
-  font-size: 0.9rem;
 }
 #solution-img {
   aspect-ratio: 4/3;
@@ -414,7 +402,7 @@ header nav {
   margin-top: 0.5rem;
   color: var(--orange-color);
 }
-.about-text h4 {
+.about-text h5 {
   margin-top: 0.5rem;
   font-weight: normal;
 }
@@ -438,6 +426,9 @@ header nav {
 }
 .about-card h3 {
   color: var(--orange-color);
+}
+.about-card h5 {
+  font-weight: normal;
 }
 .about-card img {
   aspect-ratio: 16/9;
@@ -464,8 +455,15 @@ header nav {
   width: 40px;
   transform: translateX(-50%);
   z-index: 1;
+  margin: 2rem 0;
 }
-
+.line {
+  width: 3px;
+  margin: auto;
+  flex: 1;
+  background-color: #d9d9d975;
+  transition: all 0.3s ease;
+}
 .journey-card {
   box-shadow: -5px 12px 40.8px -8px #00000050;
   color: #fff;
@@ -484,8 +482,9 @@ header nav {
   width: 60px;
   height: 60px;
 }
-.journey-text p {
-  font-size: 0.8rem;
+.journey-text h5 {
+  font-weight: normal;
+  margin-top: 0.5rem;
 }
 #partner {
   background: var(--primary-background);
@@ -579,7 +578,7 @@ form textarea {
   background: #f5f5f5;
   outline: none;
 }
-form button {
+.footer-button {
   border-radius: 20em;
   cursor: pointer;
   font-weight: bold;
@@ -777,7 +776,9 @@ form button {
     z-index: 2;
   }
   #divider {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     color: #a9a6a6;
   }
   #journey {
@@ -791,7 +792,6 @@ form button {
     align-self: flex-start;
     margin-left: calc(50% - 330px - 30px);
   }
-
   .journey-card.right {
     align-self: flex-end;
     margin-right: calc(50% - 330px - 30px);
@@ -818,6 +818,18 @@ form button {
   #hero-container {
     gap: 6.2rem;
   }
+  .journey-card {
+    max-width: 350px;
+    position: relative;
+  }
+  .journey-card.left {
+    align-self: flex-start;
+    margin-left: calc(50% - 350px - 30px);
+  }
+  .journey-card.right {
+    align-self: flex-end;
+    margin-right: calc(50% - 350px - 30px);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -827,5 +839,17 @@ form button {
   #hero {
     background-position: center;
     background-size: contain;
+  }
+  .journey-card {
+    max-width: 400px;
+    position: relative;
+  }
+  .journey-card.left {
+    align-self: flex-start;
+    margin-left: calc(50% - 400px - 30px);
+  }
+  .journey-card.right {
+    align-self: flex-end;
+    margin-right: calc(50% - 400px - 30px);
   }
 }
