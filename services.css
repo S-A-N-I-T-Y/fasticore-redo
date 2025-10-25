@@ -65,7 +65,7 @@ header nav {
 }
 
 .navlist li a {
-  color: var(--light-background);
+  color: var(--text-color);
 }
 
 #menu-bar {

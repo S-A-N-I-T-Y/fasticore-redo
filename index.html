@@ -232,7 +232,7 @@
 
     <section id="solution">
       <div id="solution-container" class="container">
-        <div class="solution-text">
+        <div id="solution-text" class="solution-text">
           <h2>Fasticore Solution</h2>
           <h4>Smart Business Solutions for Africa and Beyond</h4>
           <h5>
@@ -262,7 +262,7 @@
           src="/images/fasticoreabout.png"
           alt="Build with Fasticore"
         />
-        <div class="about-text">
+        <div id="about-text" class="about-text">
           <h2>About Us</h2>
           <h5>
             Fasticore Technology Limited is a software development company
@@ -460,11 +460,16 @@
 
     <footer id="footer">
       <div id="footer-container" class="container">
-        <form>
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Your Email" />
-          <textarea name="" id="" placeholder="Your Message"></textarea>
-          <button class="footer-button">Send</button>
+        <form class="footer-form">
+          <input id="footer-name" type="text" placeholder="Your Name" />
+          <input id="footer-email" type="text" placeholder="Your Email" />
+          <textarea
+            name=""
+            id="footer-textarea"
+            placeholder="Your Message"
+          ></textarea>
+          <p id="error-message"></p>
+          <button id="footer-button" class="footer-button">Send</button>
         </form>
 
         <div class="links">
@@ -517,5 +522,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script type="module" src="/dist/index.js"></script>
+    <script type="module" src="/dist/group.js"></script>
   </body>
 </html>

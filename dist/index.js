@@ -1,9 +1,4 @@
 gsap.registerPlugin(ScrollTrigger, SplitText);
-const sideNav = document.getElementById("side-nav");
-const hamburger = document.getElementById("menu-bar");
-const closeButton = document.getElementById("close-button");
-const backdrop = document.getElementById("backdrop");
-const header = document.getElementById("header");
 const hero = document.getElementById("hero");
 const heroText = document.getElementById("hero-text");
 const heroImg = document.getElementById("hero-img");
@@ -22,7 +17,7 @@ const solutionImg = document.getElementById("solution-img");
 const about = document.getElementById("about");
 const aboutImg = document.getElementById("about-img");
 const aboutText = document.getElementById("about-text");
-const aboutCard = document.querySelectorAll(".about-card");
+const aboutCards = document.querySelectorAll(".about-card");
 const journey = document.getElementById("journey");
 const journeyH2 = document.getElementById("journey-h2");
 const journeyTrack = document.querySelectorAll(".track");
@@ -52,34 +47,6 @@ const valuesSwiper = new Swiper(swiperCont, {
             slidesPerView: 2.5,
         },
     },
-});
-const openMenu = () => {
-    sideNav.classList.remove("close");
-    hamburger.style.display = "none";
-    backdrop.style.opacity = "1";
-    backdrop.style.zIndex = "1001";
-};
-const closeMenu = () => {
-    sideNav.classList.add("close");
-    hamburger.style.display = "block";
-    backdrop.style.opacity = "0";
-    backdrop.style.zIndex = "0";
-};
-hamburger.addEventListener("click", openMenu);
-closeButton.addEventListener("click", closeMenu);
-backdrop.addEventListener("click", closeMenu);
-const headerTween = gsap
-    .timeline({
-    scrollTrigger: {
-        trigger: header,
-        start: "bottom top",
-        toggleActions: "play none none reverse",
-    },
-})
-    .fromTo(header, { backgroundColor: "transparent", borderBottom: "2px solid transparent" }, {
-    backgroundColor: "#ffffff",
-    borderBottom: "1px solid #00000010",
-    ease: "power1.inOut",
 });
 const heroTween = gsap
     .timeline({
@@ -132,30 +99,116 @@ gsap.from(swiperCont, {
         toggleActions: "play none none reverse",
     },
 });
-const buildTween = gsap.timeline({
-    scrollTrigger: {
-        trigger: build,
-        start: "10% 80%",
-    },
-});
-buildTween.fromTo(buildText, {
-    xPercent: -50,
-    opacity: 0,
-}, {
-    xPercent: 0,
-    opacity: 1,
-    duration: 0.5,
-    ease: "power1.inOut",
-});
-buildTween.fromTo(buildImg, {
-    opacity: 0,
-    xPercent: 50,
-}, {
-    xPercent: 0,
-    opacity: 1,
-    delay: 0.1,
-    duration: 0.5,
-    ease: "power1.inOut",
+// const buildTween = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: build,
+//     start: "10% 80%",
+//   },
+// });
+// buildTween.fromTo(
+//   buildText,
+//   {
+//     xPercent: -50,
+//     opacity: 0,
+//   },
+//   {
+//     xPercent: 0,
+//     opacity: 1,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   }
+// );
+// buildTween.fromTo(
+//   buildImg,
+//   {
+//     opacity: 0,
+//     xPercent: 50,
+//   },
+//   {
+//     xPercent: 0,
+//     opacity: 1,
+//     delay: 0.1,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   }
+// );
+// const solutionTween = gsap
+//   .timeline({
+//     scrollTrigger: {
+//       trigger: solution,
+//       start: "10% 80%",
+//     },
+//   })
+//   .fromTo(
+//     solutionText,
+//     {
+//       xPercent: 50,
+//       opacity: 0,
+//     },
+//     {
+//       xPercent: 0,
+//       opacity: 1,
+//       duration: 1,
+//       ease: "power1.inOut",
+//     }
+//   )
+//   .fromTo(
+//     solutionImg,
+//     {
+//       opacity: 0,
+//       xPercent: -50,
+//     },
+//     {
+//       xPercent: 0,
+//       opacity: 1,
+//       duration: 1,
+//       ease: "power1.inOut",
+//     }
+//   );
+// const aboutTween = gsap
+//   .timeline({
+//     scrollTrigger: {
+//       trigger: about,
+//       start: "10% 80%",
+//     },
+//   })
+//   .fromTo(
+//     aboutImg,
+//     {
+//       xPercent: -50,
+//       opacity: 0,
+//     },
+//     {
+//       xPercent: 0,
+//       opacity: 1,
+//       duration: 1,
+//       ease: "power1.inOut",
+//     }
+//   )
+//   .fromTo(
+//     aboutText,
+//     {
+//       opacity: 0,
+//       xPercent: 50,
+//     },
+//     {
+//       xPercent: 0,
+//       opacity: 1,
+//       duration: 1,
+//       ease: "power1.inOut",
+//     }
+//   );
+aboutCards.forEach((card) => {
+    gsap.from(card, {
+        yPercent: 20,
+        stagger: 0.2,
+        duration: 1,
+        scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+        },
+    });
 });
 journeyCard.forEach((card) => {
     gsap.from(card, {

@@ -34,7 +34,7 @@
         </a>
         <ul class="navlist">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./services.css">Services</a></li>
+          <li><a href="./services.html">Services</a></li>
           <li><a href="./solution.html">Solutions</a></li>
           <li><a href="./academy.html">Academy</a></li>
           <li><a href="./about.html">About Us</a></li>
@@ -331,11 +331,16 @@
 
     <footer id="footer">
       <div id="footer-container" class="container">
-        <form>
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Your Email" />
-          <textarea id="" placeholder="Your Message"></textarea>
-          <button>Send</button>
+        <form class="footer-form">
+          <input id="footer-name" type="text" placeholder="Your Name" />
+          <input id="footer-email" type="text" placeholder="Your Email" />
+          <textarea
+            name=""
+            id="footer-textarea"
+            placeholder="Your Message"
+          ></textarea>
+          <p id="error-message"></p>
+          <button id="footer-button" class="footer-button">Send</button>
         </form>
 
         <div class="links">
@@ -388,5 +393,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script type="module" src="/dist/solution.js"></script>
+    <script type="module" src="/dist/group.js"></script>
   </body>
 </html>
