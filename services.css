@@ -31,6 +31,7 @@ body {
   letter-spacing: 1px;
   background-color: var(--primary-background);
   letter-spacing: 1px;
+  position: relative;
 }
 .container {
   width: 90%;
@@ -234,6 +235,17 @@ section button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+}
+section button.selected {
+  border: 2px solid #ff6701;
+  background-color: #fff4eb;
+}
+input.error,
+textarea.error,
+select.error {
+  border: 1px solid red;
+  background-color: #ffe6e6;
 }
 .actions button {
   padding: 0.5rem 1.5rem;
@@ -243,6 +255,7 @@ section button {
   cursor: pointer;
   border-radius: 8px;
 }
+
 .prev {
   background: #cdcdcd;
 }
@@ -383,6 +396,7 @@ section button {
 .footer-container > div {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 0.625rem;
   gap: 0.5rem;
