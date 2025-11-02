@@ -3,6 +3,9 @@ declare const gsap: typeof gsapType;
 declare const Swiper: any;
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
+const faqHeaders = document.querySelectorAll<HTMLElement>(".faq-header");
+const faqContents = document.querySelectorAll<HTMLElement>(".faq-content");
+
 document.addEventListener("DOMContentLoaded", () => {
   const steps = document.querySelectorAll<HTMLElement>(".step");
   const formSteps = document.querySelectorAll<HTMLElement>(".form-step");
@@ -124,5 +127,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form?.addEventListener("submit", () => {
     alert("Your Response has been submitted.");
+  });
+});
+
+faqHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    let faq = header.parentElement;
+    let faqContent = faq?.querySelector<HTMLElement>(".faq-content");
+    faqContents.forEach((content) => {
+      if (content !== faqContent) {
+        content.classList.remove("active");
+        content.style.maxHeight = "0";
+      }
+    });
+    faqContent?.classList.toggle("active");
+    if (faqContent) {
+      if (faqContent.classList.contains("active")) {
+        faqContent.style.maxHeight = faqContent.scrollHeight + "px";
+      } else {
+        faqContent.style.maxHeight = "0";
+      }
+    }
   });
 });

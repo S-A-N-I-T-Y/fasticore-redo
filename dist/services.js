@@ -1,4 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, SplitText);
+const faqHeaders = document.querySelectorAll(".faq-header");
+const faqContents = document.querySelectorAll(".faq-content");
 document.addEventListener("DOMContentLoaded", () => {
     const steps = document.querySelectorAll(".step");
     const formSteps = document.querySelectorAll(".form-step");
@@ -104,6 +106,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     form === null || form === void 0 ? void 0 : form.addEventListener("submit", () => {
         alert("Your Response has been submitted.");
+    });
+});
+faqHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+        let faq = header.parentElement;
+        let faqContent = faq === null || faq === void 0 ? void 0 : faq.querySelector(".faq-content");
+        faqContents.forEach((content) => {
+            if (content !== faqContent) {
+                content.classList.remove("active");
+                content.style.maxHeight = "0";
+            }
+        });
+        faqContent === null || faqContent === void 0 ? void 0 : faqContent.classList.toggle("active");
+        if (faqContent) {
+            if (faqContent.classList.contains("active")) {
+                faqContent.style.maxHeight = faqContent.scrollHeight + "px";
+            }
+            else {
+                faqContent.style.maxHeight = "0";
+            }
+        }
     });
 });
 export {};
